@@ -1,4 +1,4 @@
-AWS S3 Automatic File Upload and AWS Transcribe 
+AWS S3 Automatic File Upload, buckets create and delete, and AWS Transcribe (Text only response) 
 
 There are two folders,
 1. audios
