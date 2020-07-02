@@ -13,6 +13,7 @@ Things to consider before running the script:
 3. Please put your credentials in the keys.py file
 4. The sleep timer is set to 5 seconds, you can change it to 1 to n seconds.
 5. Make sure you make the region name same in create_buckets.py and app.py, if you want to make your code more flexible, you can always change the keys.py file to add general configurations for your app.
+6. The delete_buckets.py does not delete empty buckets. You can upload a test file and then delete the entire bucket.
 
 To run the app,
 
