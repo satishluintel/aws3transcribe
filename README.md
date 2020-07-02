@@ -24,7 +24,9 @@ python3 app.py
 Dependencies installation ( Please run the following commands in your shell to install dependencies)
 
 sudo apt-get update
+
 sudo apt install python3-pip
+
 pip3 install boto3
 
 ------------------------------------------------------------------------------------------------------
