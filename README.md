@@ -19,7 +19,13 @@ To run the app,
 
 python3 app.py
 
+------------------------------------------------------------------------------------------------
 
+Dependencies installation ( Please run the following commands in your shell to install dependencies)
+
+sudo apt-get update
+sudo apt install python3-pip
+pip3 install boto3
 
 ------------------------------------------------------------------------------------------------------
 
@@ -37,5 +43,3 @@ python3 delete_buckets.py
 This will list all the available buckets and you just need to enter the name of the bucket to delete. 
 
 -------------------------------------------------------------------------------------------------------
-
-Dependency installation instructions will be added later.
