@@ -31,7 +31,7 @@ for x in range(len(response["Buckets"])):
 	print(x," ",response["Buckets"][x]["Name"] )  #print bucket names 
 
 # SELECT A BUCKET TO UPLOAD ALL THE AUDIO FILES YOU HAVE IN AUDIOS FOLDER.
-y = input("\nSelect a bucket to upload ....\n")
+y = input("\nSelect a bucket to upload ( in case you do not have a bucket, use create_buckets.py file to create one )....\n")
 selected = response["Buckets"][int(y)]["Name"] #selecting a particular bucket
 print("Selected ", str(selected) )
 list = boto3.resource('s3', aws_access_key_id = access_key, aws_secret_access_key = secret_access_key, region_name = rname)
