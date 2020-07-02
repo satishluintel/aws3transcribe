@@ -103,6 +103,8 @@ for file in bucket.objects.all():
 			print("Job "+ job_name + " finished. Written to text File ", create_file)
 			print("-\n")
 			print("----------------------------------------------------------------------")
+			response = transcribe.delete_transcription_job(TranscriptionJobName=job_name)
+
 			break
 
 		if status['TranscriptionJob']['TranscriptionJobStatus'] == 'FAILED':
