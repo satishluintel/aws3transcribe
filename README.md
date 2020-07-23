@@ -17,31 +17,27 @@ Things to consider before running the script:
 
 To run the app,
 
-python3 app.py
-
-------------------------------------------------------------------------------------------------
+`python3 app.py`
 
 Dependencies installation ( Please run the following commands in your shell to install dependencies)
 
+```
 sudo apt-get update
 
 sudo apt install python3-pip
 
 pip3 install boto3
-
-------------------------------------------------------------------------------------------------------
+```
 
 If you do not have any buckets set up,
-run create_buckets.py by 
+run `create_buckets.py` by 
 
-python3 create_buckets.py
+`python3 create_buckets.py`
 
 You can choose any bucket name as long as it is lowercase characters.
 
 Similarly, if you want to get rid of some buckets you have run delete_buckets.py by,
 
-python3 delete_buckets.py
+`python3 delete_buckets.py`
 
 This will list all the available buckets and you just need to enter the name of the bucket to delete. 
-
--------------------------------------------------------------------------------------------------------
