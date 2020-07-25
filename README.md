@@ -24,6 +24,7 @@ To run the app,
 
 `python3 app.py` 
 
+Sometimes transcript breaks in the middle and keeps you waiting. To debug this, go to your S3 bucket and select all files that have been already transcribed, and DELETE them at once. Also, comment the upload code in app.py so that you do not double upload audios you already uploaded.
 _________________________________________________________________________________________________________________________
 CHANGING FILES TO WAV FORMAT
 _________________________________________________________________________________________________________________________
@@ -90,3 +91,10 @@ Similarly, if you want to get rid of some buckets you have run delete_buckets.py
 `python3 delete_buckets.py`
 
 This will list all the available buckets and you just need to enter the name of the bucket to delete. 
+
+______________________________________________________________________________________________________
+________________________________________________________
+
+FOR CUSTOM SERVICE CONTACT : company@learngaroo.com
+Please put Subject: AWS
+________________________________________________________
