@@ -15,9 +15,41 @@ Things to consider before running the script:
 5. Make sure you make the region name same in create_buckets.py and app.py, if you want to make your code more flexible, you can always change the keys.py file to add general configurations for your app.
 6. The delete_buckets.py does not delete empty buckets. You can upload a test file and then delete the entire bucket.
 
+
 To run the app,
 
-`python3 app.py`
+`python3 app.py` 
+
+WARNING : If you files are not in wav format, please change your audio files to wav using ffmpeg OR you can change the app.py code like below,if your files are in mp3 format, 
+Replace
+```
+transcribe.start_transcription_job(TranscriptionJobName = job_name, Media = {'MediaFileUri': S3_URL }, MediaFormat = 'wav', LanguageCode='en-US')
+
+```
+by
+
+```
+transcribe.start_transcription_job(TranscriptionJobName = job_name, Media = {'MediaFileUri': S3_URL }, MediaFormat = 'mp3', LanguageCode='en-US')
+
+```
+and things will work. 
+
+If you want this source code to run 'as it is', then before you run the app.py file, follow the following steps to convert all audios in audio folder to wav format using ffmpeg by following the codes below
+```
+sudo apt install ffmpeg
+```
+after installing ffmpeg, change the files to wav format, mono channel format,
+```
+ffmpeg -i file_in_your_uploading_folder.mp3 -y -ar 44100 -ac 1 audios/target_file_name.wav
+```
+(to be updated soon)
+
+
+
+
+
+
+___________________________________________________________________________________________________________
 
 Dependencies installation ( Please run the following commands in your shell to install dependencies)
 
