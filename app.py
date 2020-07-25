@@ -39,11 +39,17 @@ bucket = list.Bucket(str(selected))
 
 # UPLOADING FROM LOCAL FOLDER audios TO REMOTE BUCKET OF YOUR CHOICE
 os.chdir('audios')
-for file in os.listdir(os.getcwd()):
-	upload_file_bucket = selected
-	upload_file_key = str(file)
-	print("Uploading File "+ upload_file_key)
-	client.upload_file(file, upload_file_bucket, upload_file_key)
+
+asking = input("\n Are you sure to upload all the contents of AUDIOS folder to S3 Bucket? [y/n] ")
+
+if asking == 'y':
+	for file in os.listdir(os.getcwd()):
+		upload_file_bucket = selected
+		upload_file_key = str(file)
+		print("Uploading File "+ upload_file_key)
+		client.upload_file(file, upload_file_bucket, upload_file_key)
+else: 
+	print("You have rejected the upload. Transcribing whatever left in the bucket....")
 
 #################################################################################
 # EVERY JOB SHOULD BE UNIQUE, HENCE WE GENERATE RANDOM STRINGS OF 12 CHARACTERS
