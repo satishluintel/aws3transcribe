@@ -95,7 +95,7 @@ ffmpeg -i file_in_your_uploading_folder.mp3 -y -ar 44100 -ac 1 audios/target_fil
 
 NOTICE: This is a very painstaking task as you could have files in thousands. 
 To automate this, I have added another script here,  
-python3 convert_to_wav.py
+convert_to_wav.py
 
 This script will take in any file name, even with spaces or brackets like ( ), or solid brackets. Before using this script make sure you add all your "to be converted files" in 'processing' folder, and then run the command below,
 
