@@ -41,7 +41,7 @@ ________________________________________________________________________________
 Before you run the app using the following command, consider to review the points from 1 to 7.
 
 ```
-`python3 app.py` 
+python3 app.py
 
 ```
 
