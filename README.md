@@ -12,7 +12,7 @@ ________________________________________________________
 
 Things to consider before running the script:
 
-1. Please make sure that you are keeping 'audios' folder empty because the script will upload everything in this folder to Amazon S3. For testing, there is an audio file inside the folder. 
+1. Please make sure that you are keeping 'audios' folder empty because the script will upload everything in this folder to Amazon S3, although it will ask if you are sure to upload. If you press any other keys than 'y' then the script will transcribe whatever is in the S3 bucket you have selected. For testing, there is an audio file inside the folder. 
 2. Please make sure that text folder is empty so that you receive transcripts for exactly what was kept in 'audios' folder. There is one sample transcription text file for your reference.
 3. Please put your credentials in the keys.py file.
 4. The sleep timer is set to 5 seconds, you can change it to 1 to n seconds in app.py.
