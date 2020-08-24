@@ -1,0 +1,2 @@
+#install pip3 too, in Linux, apt install python3-pip 
+boto3== 1.14.47

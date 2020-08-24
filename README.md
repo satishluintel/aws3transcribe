@@ -20,6 +20,11 @@ sudo apt install python3-pip
 
 pip3 install boto3
 ```
+or you can install specific version of boto3 from requirements.txt
+
+```
+pip3 install -r requirements.txt
+```
 ____________________________________________________________________________________________________________________________________________________
 
 
