@@ -117,7 +117,8 @@ for file in bucket.objects.all():
 			print("-\n")
 			print("----------------------------------------------------------------------")
 
-			# response = transcribe.delete_transcription_job(TranscriptionJobName=job_name)
+			#delete the transcription job from AWS transcribe logs.
+			response = transcribe.delete_transcription_job(TranscriptionJobName=job_name)
 
 			break
 
