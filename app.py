@@ -85,6 +85,7 @@ for file in bucket.objects.all():
 	file_name = str(list).replace('.wav', '') 
 	
 	create_file = open('text/'+ str(file_name+".txt"), 'w+')
+	create_jsonfile = open('jsonresponse/'+ str(file_name+".json"), 'w+')
 	transcribe = boto3.client('transcribe', aws_access_key_id = access_key, aws_secret_access_key = secret_access_key, region_name = 'ap-southeast-1')
 	job_name = randomString()
 	S3_URL = 's3://'+str(selected)+'/'+str(list)
@@ -100,16 +101,23 @@ for file in bucket.objects.all():
 		if status['TranscriptionJob']['TranscriptionJobStatus'] == 'COMPLETED':
 			response = urllib.request.urlopen(status['TranscriptionJob']['Transcript']['TranscriptFileUri'])
 			data = json.loads(response.read())
+			
+			#print(data)
 			text = data['results']['transcripts'][0]['transcript']
 			create_file.write(text)
 			create_file.close()
+
+			#writing a json file for further processing
+			create_jsonfile.write(str(data))
+			create_jsonfile.close()
 
 			print("----------------------------------------------------------------------")
 			print("-\n")
 			print("Job "+ job_name + " finished. Written to text File ", create_file)
 			print("-\n")
 			print("----------------------------------------------------------------------")
-			response = transcribe.delete_transcription_job(TranscriptionJobName=job_name)
+
+			# response = transcribe.delete_transcription_job(TranscriptionJobName=job_name)
 
 			break
 
