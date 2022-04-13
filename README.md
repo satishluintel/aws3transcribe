@@ -112,6 +112,6 @@ This single command will convert all your audios in ANY format to wav format and
 
 ___________________________________________________________________________________________________________
 
-FOR CUSTOM SERVICE CONTACT : company@learngaroo.com
+CONTACT : satishluintel @ Telegram 
 Please put Subject: AWS
 ___________________________________________________________________________________________________________
